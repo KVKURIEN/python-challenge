@@ -1,0 +1,14 @@
+import pandas as pd
+import numpy as np
+net_income = "PyBank/Resources/budget_data.csv"
+net_income_df = pd.read_csv(net_income)
+net_income_df.head()
+months = net_income_df['Date'].count()
+print (months)
+profit = net_income_df['Revenue'].sum()
+print(profit)
+
+net_income_df['Delta'] = net_income_df["Revenue"].diff().fillna(0).astype(int)
+total_delta = net_income_df['Delta'].sum()
+ave_change = total_delta / months 
+ave_change
