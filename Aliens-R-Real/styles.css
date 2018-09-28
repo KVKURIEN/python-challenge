@@ -1,0 +1,23 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.jumbotron {
+  margin: 20px;
+  background-image: url(https://media.istockphoto.com/photos/aliens-picture-id175217194?s=2048x2048);
+  background-size: cover;
+  color: rgb(81, 238, 217);
+  text-align: center;
+}
+
+.form-control {
+  display: inline-block;
+  width: 145px;
+}
+
+table {
+  table-layout: fixed;
+  background-color: black;
+  color: white;
+}
