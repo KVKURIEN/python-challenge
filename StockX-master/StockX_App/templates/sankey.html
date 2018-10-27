@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Resale Landscape</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Plugin CSS -->
+    <link href="static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static/css/creative.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="/">Most Hype: Nike vs. Adidas</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Top Premium Sneakers</a>
+            </li>     
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/project-limitations">Project Limitiations</a>
+            </li>            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+              <strong>Insights for resellers and sneakerheads looking to stay ahead of the curve</strong>
+            </h1>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <p class="text-faded mb-5">In the midst of the twilight of Air Jordans' and prevalence of Yeezy's, do you which sneaker demands a premium in price and attention? This dashboard showcases key metrics so you can always cop the most hype sneakers and realize greater ROI. From the amateur collector to the sneaker wizards, everyone is certain to find tremendous value here. </p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">Resale is the Product of Demand surpassing Supply </h2>
+            <hr class="light my-4">
+            <p class="text-faded mb-4">We dive into the transactional details so you don't have to. Leveraging scraped data from StockX, we've analyzed the top 100 Nike and Adidas sneakers to uncover potential opportunities that resellers can immediately capitalize on. Has Yeezy in fact jumped over Jumpman? </p>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="p-0" id="portfolio">
+            <div class="container text-center">
+                    <h1 class="jumbotron">Retail Price to Resale Premium Sankey Flow</h1>
+                    <div>
+                         <div id="sankey_multiple" style="width: 1115px; height: 800px;"></div>
+
+                          <script type="text/javascript">
+                            google.charts.load("current", {packages:["sankey"]});
+                            google.charts.setOnLoadCallback(drawChart);
+                             function drawChart() {
+                              var data = new google.visualization.DataTable();
+                              data.addColumn('string', 'From');
+                              data.addColumn('string', 'To');
+                              data.addColumn('number', 'Total Sold'); 
+                              data.addRows([
+                                ['Adidas','$100-$179',34321],
+                                ['Adidas','$180-$200',147814],
+                                ['Adidas','$200+',171026],
+                                ['$100-$179','Dame',2425],
+                                ['$100-$179','Other',10256],
+                                ['$100-$179','NMD',21640],
+                                ['$180-$200','Yeezy Other',112547],
+                                ['$180-$200','Boost',35267],
+                                ['$200+','Pharrell',25288],
+                                ['$200+','Yeezy Boost',145738],
+                                ['Dame','Highly Profitable',2425],
+                                ['Yeezy Boost','Highly Profitable',145738],
+                                ['Yeezy Other','Valuable',112547],
+                                ['Pharrell','Valuable',25288],
+                                ['Other','Worthless',10256],
+                                ['NMD','Worthless',21640],
+                                ['Boost','Worthless',35267],
+                                ['Nike','$100-$179',234890],
+                                ['Nike','$180-$200',199139],
+                                ['$100-$179','SB',2316],
+                                ['$100-$179','Jordan 1',167595],
+                                ['$100-$179','Other',64979],
+                                ['$180-$200','Off-White',51061],
+                                ['$180-$200','Baller',8766],
+                                ['$180-$200','Jordan II-IX',71973],
+                                ['$180-$200','Jordan X+',67339],
+                                ['Off-White','Highly Profitable',51061],
+                                ['Jordan 1','Highly Profitable',167595],
+                                ['SB','Valuable',2316],
+                                ['Other','Valuable',64979],
+                                ['Baller','Valuable',8766],
+                                ['Jordan II-IX','Valuable',71973],
+                                ['Jordan X+','Valuable',67339]
+
+                              ]);
+                          
+                              // Set chart options
+                              var colors = ['#00c000', '#001eff', '#ff4d00','#15ff00', '#ff0000', '#8b4bce', '#20f1dc'];
+                          
+                              var options = {
+                                height: 800,
+                                sankey: {
+                                  node: {
+                                    width: 25,
+                                    colors: colors,
+                                    nodePadding: 10,
+                                    labelPadding: 5,
+                                    label:  { fontName: 'Times-Roman',
+                                                   fontSize: 20 }
+                                  },
+                                  iterations:0,
+                                  interactivity: true,
+                                  tooltip: {isHtml: true}, 
+                                  link: {
+                                    colorMode: 'unique',
+                                    colors: colors,
+                                    color: { stroke: 'black', strokeWidth: .1 }
+                                  }
+                                }
+                              };
+                          
+                              // Instantiate and draw our chart, passing in some options.
+                              var chart = new google.visualization.Sankey(document.getElementById('sankey_multiple'));
+                              chart.draw(data, options);
+                             }
+                          </script>
+                        </div>
+                  </div>
+            </section>
+            <section id="contact">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-lg-8 mx-auto text-center">
+                          <h2 class="section-heading">Key Takeaways</h2>
+                          <hr class="my-4">
+                          <p class="mb-5">So has Kanye’s sneakers eclipsed the Jumpan? In terms of the resell market, which functions as a quasi-proxy for “coolness,” quantifiably Yeezy has won by controlling hype by limiting the supply. Jordan’s have flooded the market but Nike is definitely the winner of the resell market with its collaboration with Off-White.  </p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-4 ml-auto text-center">
+                          <i class="fas fa-check fa-3x mb-3 sr-contact-1"></i>
+                          <h3 class="section-heading">Nike</h3>
+                          <p>Witnessing decline in resell value of Jordans, 1s average price premium at 77%, II-IXs at 23% & X+ at 11%. Off-White saving Nike who's highly limited, uniquely creative shoes averaged 285% returns.  </p>
+                          <p>Off-White saving Nike.These highly limited, uniquely creative collaborations averaged 285% returns.  </p>
+                        </div>
+                        <div class="col-lg-4 mr-auto text-center">
+                          <i class="fas fa-list-ol fa-3x mb-3 sr-contact-2"></i>
+                          <h3 class="section-heading">Adidas</h3>
+                                <p>Although Jordan sold more shoes in total, Kanye’s ROI on the Boosts at 126% are much greater than Jordan 1s at 77%.      </p>
+                                <p>Collaboration with Damian Lilliard had returns of 149% </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+      <div class="container-fluid p-0">
+        <div class="row no-gutters popup-gallery">
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="static/img/portfolio/fullsize/1.jpg">
+              <img class="img-fluid" src="static/img/portfolio/thumbnails/1.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    adidas
+                  </div>
+                  <div class="project-name">
+                    Yeezy Boost 350 V2 Black Red
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="static/img/portfolio/fullsize/2.jpg">
+              <img class="img-fluid" src="static/img/portfolio/thumbnails/2.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Nike
+                  </div>
+                  <div class="project-name">
+                    Blazer Mid Off-White
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="static/img/portfolio/fullsize/3.jpg">
+              <img class="img-fluid" src="static/img/portfolio/thumbnails/3.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Adidas
+                  </div>
+                  <div class="project-name">
+                    Yeezy Boost 350 V2 Beluga
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="static/img/portfolio/fullsize/4.jpg">
+              <img class="img-fluid" src="static/img/portfolio/thumbnails/4.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Nike
+                  </div>
+                  <div class="project-name">
+                    Air Presto Off-White Black (2018)
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="static/img/portfolio/fullsize/5.jpg">
+              <img class="img-fluid" src="static/img/portfolio/thumbnails/5.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Adidas
+                  </div>
+                  <div class="project-name">
+                    Dame 4 A Bathing Ape Black
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="static/img/portfolio/fullsize/6.jpg">
+              <img class="img-fluid" src="static/img/portfolio/thumbnails/6.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Nike
+                  </div>
+                  <div class="project-name">
+                    Jordan 1 Retro High Off-White University Blue
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading">More Visualizations</h2>
+              <hr class="my-4">
+            </div>
+          </div>
+        </div> 
+          <div class="row" id="images">           
+              <div class="column col-lg-4 text-center">
+                <a href="/bar"><img src="static/img/portfolio/thumbnails/bar.png" alt="Bar Chart" class="imageNav-photo" style="width:100px;height:100px;"></a>
+              </div>
+              <div class="column col-lg-4 text-center">
+                <a href="/bubble"><img src="static/img/portfolio/thumbnails/bubble.png" alt="Bubble Chart" class="imageNav-photo" style="width:100px;height:100px;"></a>
+             </div>
+              <div class="column col-lg-4 text-center">
+                <a href="/sankey"><img src="static/img/portfolio/thumbnails/sankey.PNG" alt="Sankey" class="imageNav-photo" style="width:100px;height:100px;"></a>
+            </div> 
+          </div>
+  </section>
+   
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="static/vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="static/js/creative.min.js"></script>
+
+  </body>
+
+</html>

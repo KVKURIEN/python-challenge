@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Resale Landscape</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'> -->
+
+    <!-- Plugin CSS -->
+    <link href="static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static/css/creative.css" rel="stylesheet">
+    <!-- Plotly Dependencies -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="/">Most Hype: Nike vs. Adidas</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Top Premium Sneakers</a>
+            </li>     
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/project-limitations">Project Limitiations</a>
+            </li>            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+              <strong>Visualization of Shoe Model and Price Premium</strong>
+            </h1>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <p class="text-faded mb-5">
+              <strong>
+              The bar graph below displays a comparison of shoe models under Nike and Adidas, to determine if there is a relationship between the type of model and price premium. 
+              </strong>
+            </p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Analysis</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="p-0" id="portfolio">
+        <div class="container text-center">
+                  <div id="bar"></div>
+                  <!-- <script src="static/js/bar.js"></script>    -->
+                  <script>
+                    var url = "/bardata";
+function buildPlot() {
+                
+    d3.json(url).then(function(response) {
+
+        console.log(response)
+                              
+        var sneakers = response.sneakerList;
+                
+        console.log(sneakers)
+    
+        var trace = {
+            type: "bar",
+            x: sneakers.map(sneaker => sneaker.category),
+            y: sneakers.map(sneaker => sneaker.price_premium), 
+            hovertext: sneakers.map(sneaker => sneaker.brand)
+            };
+                
+        var data = [trace];
+                
+        var layout = {
+            title: "Price Premium of Sneaker Models",
+            xaxis: {title: "Model of Sneaker"},
+            yaxis: {title: "Price Premium (%)"},
+            hovermode: "closest"
+            };
+                
+        Plotly.plot("bar", data, layout);
+              
+        });
+
+    }
+buildPlot();
+
+                  </script>
+          </div>
+    </section>
+    <section class="bg-primary" id="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 mx-auto text-center">
+                <div class="row">
+                    <div class="column col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <h2 class = "section-heading text-white">Price Premium </h2>
+                          <hr class="light my-4">
+                          <p class="text-faded mb-4">Price Premium is a measure of how much more an unworn item currently sells for, as compared to its original retail price. For Nikes' Off White collection, designed by Virgil Abloh, the average price premium for his shoes is 285% higher than retail price.</p>
+                          <a class="portfolio-box" href="static/img/portfolio/fullsize/ow2.jpg">
+                            <img class="img-fluid" src="static/img/portfolio/fullsize/ow2.jpg" alt="">
+                            <div class="portfolio-box-caption">
+                              <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                  Nike
+                                </div>
+                                <div class="project-name">
+                                    Off-White x Air Jordan 1 High OG 'The Ten'
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                    <div class="column col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <h2 class = "section-heading text-white">Shoe Model</h2>
+                          <hr class="light my-4">
+                          <p class="text-fapded mb-4"> Nikes' Award winning Off White footwear collection contains some of the most high in demand shoe models. Per StockX, Off White shoes usually sell for over twice their retail value. This may be partly due to the designer being Kanye West's creative director and Louis Vouitton men's artistic director</p>
+                          <a class="portfolio-box" href="static/img/portfolio/fullsize/ow1.jpg">
+                            <img class="img-fluid" src="static/img/portfolio/fullsize/ow1.jpg" alt="">
+                            <div class="portfolio-box-caption">
+                              <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                  Nike
+                                </div>
+                                <div class="project-name">
+                                  Off-White x Air Jordan 1 High OG 'White'
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="services">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                <h2 class="section-heading">More Visualizations</h2>
+                <hr class="my-4">
+              </div>
+            </div>
+          </div> 
+            <div class="row" id="images">           
+                <div class="column col-lg-4 text-center">
+                  <a href="/bar"><img src="static/img/portfolio/thumbnails/bar.png" alt="Bar Chart" class="imageNav-photo" style="width:100px;height:100px;"></a>
+                </div>
+                <div class="column col-lg-4 text-center">
+                  <a href="/bubble"><img src="static/img/portfolio/thumbnails/bubble.png" alt="Bubble Chart" class="imageNav-photo" style="width:100px;height:100px;"></a>
+               </div>
+                <div class="column col-lg-4 text-center">
+                  <a href="/sankey"><img src="static/img/portfolio/thumbnails/sankey.PNG" alt="Sankey" class="imageNav-photo" style="width:100px;height:100px;"></a>
+              </div> 
+            </div>
+    </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="static/vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <!-- <script src="js/creative.min.js"></script> -->
+
+  </body>
+
+</html>
